@@ -1,0 +1,353 @@
+body{
+	background: #e3e3e3;
+	width: 90%;
+	margin:0px 25px;
+	border: 3px solid #00c4ff;
+}
+
+a:active{
+	background-color: green;
+}
+
+a:visited, a:link{
+	color: blue;
+}
+
+div.Date{
+	background-color: #00c0ff;
+	color: white;
+	font-family: cambria;
+	font-weight: bold;
+	padding: 0px 5px;
+	margin: 3px 0;
+	float: right;
+}
+
+div.Top{
+	background-color: #00c0ff;
+	color: white;
+	font-family: cambria;
+	font-weight: bold;
+	padding:0px 5px;
+	margin: 0px 0px;
+}
+Marquee#Announce{
+	margin-top: -50px;
+	margin-left: 135px;
+	padding-bottom: 2px;
+}
+
+/* Forms */
+	div#Register{
+		font-family: cambria;
+		width: 350px;
+		padding: 1px;
+		margin: auto;
+		border:solid 3px white;
+		background: #e3e3e3;
+		border-radius: 6px 6px 6px 6px;
+	}
+	div#Heading{
+		text-align: center;
+		padding: 10px;
+		background: #00c0ff;
+		color: white;
+		margin-bottom:10px;
+		border-radius: 5px 5px 5px 5px; 
+	}
+	form{
+		text-align: center;
+		margin: 5px;
+		background: #00c0ff;
+		padding: 25px 35px;
+		color: white;
+	}
+
+	input{
+		border-radius: 5px 5px 5px 5px;
+		background: white;
+		padding: 10px;
+		box-shadow: 2px 2px 5px grey;
+	}
+	p a{
+		text-decoration: none;
+		padding: 5px;
+		background: white;
+		border: 2px solid grey;
+		border-radius: 5px 5px 5px 5px;
+	}
+button{
+	color: black;
+	font-family: cambria;
+	font-size: 30px;
+	background: white;
+	border:solid 5px black;
+	width: 200px;
+	height: 50px;
+}
+
+div#contents{
+	overflow: hidden;
+}
+
+/*Menu Button*/
+nav#nav{
+	float: inline-start;
+	margin: 0px 10px;
+	border-right: 2px dotted #00c0ff;
+
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 0px;
+  
+  z-index: 1; 
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: relative;
+  top: 25px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 3; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #00c0ff;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #00ccff;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: relative;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  /*transform-origin: 10% 50%;*/
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+/* Sections for articles */
+section.article{
+	
+	border-bottom: 3px solid white;
+	margin-bottom: 10px;
+	text-align: center;
+	width: 80%;
+	float:inline-end;
+	margin-right: 10px;
+}
+
+section.article b{
+	text-transform: uppercase;
+}
+
+/*For the posting of Assignments*/
+#post{
+	border-radius: 5px;
+	border: 3px solid white;
+	float: none;
+	margin-left: 200px;
+}
+
+#post form table{
+	width: 100%;
+}
+
+#post form table tr td{
+	width: 200px;
+	height: 70px;
+	
+}
+
+#post form textarea{
+	width: 100%;
+	height: 250px;
+}
+
+input#submit{
+	width: 100px;
+	height: 100px;
+	color: #00c0ff;
+	font-weight: bold;
+}
+
+/*For viewing Assignment*/
+input#rem{
+	width: 40px;
+
+}
+
+input#action{
+	color: #00c0ff;
+}
+
+/*Student Page*/
+div#Student{
+	/*width: 800px;*/
+	margin-right: 30px;
+/*	float: right;*/
+	overflow: hidden;
+	height: 50%;
+	line-height: 15px;
+	background-color: #00c0ff;
+}
+div#Student table{
+	float: left;
+	line-height: 30px;
+	color: white;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-right: 3 dotted blue;
+}
+
+/*Submiting Assignment*/
+div#Submit{
+border-radius: 5px;
+	border: 3px solid white;
+	float: none;
+	margin-left: 200px;
+}
+
+#Submit form textarea{
+	width: 50%;
+	height: 200px;
+}
+
+/* Media Queries */
+@media(max-width: 1050px){
+	body{
+		float:none;
+		width: 100%;
+	}
+	#nav{
+		display: none;
+	}
+
+	div#contents *{
+		float: none;
+		margin: 0;
+	}
+
+	section{
+		width: 90%;
+	}
+
+	form{
+		height: 100%;
+	}
+
+	div#Student form table{
+		float: none;
+		border: 5px solid white;
+	}
+
+	div#Student{
+	/*width: 800px;*/
+	margin-right: 30px;
+/*	float: right;*/
+	overflow: hidden;
+	height: 100%;
+	line-height: 25px;
+	background-color: #00c0ff;
+}
+}
